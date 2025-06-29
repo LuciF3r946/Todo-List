@@ -1,0 +1,177 @@
+/* TodoItems.css */
+
+.cyber-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  background: rgba(0, 240, 255, 0.05);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  transition: all 0.3s;
+  position: relative;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.cyber-item:hover {
+  background: rgba(0, 240, 255, 0.1);
+  border-color: #00f0ff;
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+}
+
+.cyber-item.completed {
+  opacity: 0.7;
+  border-color: rgba(0, 240, 255, 0.2);
+}
+
+.task-controls {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #00f0ff;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.3s;
+}
+
+.checkbox:hover {
+  background: rgba(0, 240, 255, 0.2);
+}
+
+.checkbox.checked {
+  background: #00f0ff;
+  color: #0a0a12;
+}
+
+.task-text {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  padding: 2px 0;
+}
+
+.completed .task-text {
+  text-decoration: line-through;
+  color: rgba(0, 240, 255, 0.6);
+}
+
+.edit-form {
+  display: flex;
+  flex: 1;
+  margin: 0 10px;
+}
+
+.edit-input {
+  flex: 1;
+  padding: 5px 10px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid #00f0ff;
+  color: #00f0ff;
+  font-family: 'Share Tech Mono', monospace;
+  outline: none;
+}
+
+.confirm-edit-btn {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background: #00f0ff;
+  color: #0a0a12;
+  border: none;
+  font-family: 'Share Tech Mono', monospace;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.confirm-edit-btn:hover {
+  background: #00c0ff;
+}
+
+.item-actions {
+  display: flex;
+  margin-left: 15px;
+}
+
+.edit-btn,
+.delete-btn {
+  background: transparent;
+  border: none;
+  font-family: 'Share Tech Mono', monospace;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-left: 5px;
+  transition: all 0.3s;
+}
+
+.edit-btn {
+  color: #00f0ff;
+  border: 1px solid #00f0ff;
+}
+
+.edit-btn:hover {
+  background: rgba(0, 240, 255, 0.2);
+}
+
+.delete-btn {
+  color: #ff0033;
+  border: 1px solid #ff0033;
+}
+
+.delete-btn:hover {
+  background: rgba(255, 0, 51, 0.2);
+}
+
+.task-status {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  font-size: 0.8rem;
+}
+
+.status-light {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 5px;
+  background: #ff0033;
+  box-shadow: 0 0 5px #ff0033;
+}
+
+.completed .status-light {
+  background: #00f0ff;
+  box-shadow: 0 0 5px #00f0ff;
+}
+
+.status-text {
+  color: rgba(0, 240, 255, 0.7);
+}
+
+/* Animation for status light */
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.status-light {
+  animation: pulse 2s infinite;
+}
