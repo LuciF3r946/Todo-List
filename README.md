@@ -72,11 +72,3 @@ Open in your browser at: [http://localhost:3000](http://localhost:3000)
 
 ---
 
-## 💡 Future Enhancements
-
-- 🏷️ Categorization/Tags
-- ⚠️ Priority Levels
-- 📅 Due Dates
-- 🔐 User Accounts (via Firebase/Firestore)
-- 🎞️ Advanced Animations
-- 🎵 Sound Customization
